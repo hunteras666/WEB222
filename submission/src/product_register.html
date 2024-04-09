@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajesh Sah</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Product Registration</h1>
+  </header>
+
+  <main>
+    <form id="signup" onsubmit="return validateForm()">
+      <!-- Product ID -->
+      <label for="productID">Product ID:</label>
+      <input type="text" id="productID" name="productID" required pattern="[0-9]{8}">
+      <div id="productIDError" class="error"></div>
+
+      <!-- Product Description -->
+      <label for="productDescription">Product Description:</label>
+      <textarea id="productDescription" name="productDescription" required minlength="20"></textarea>
+      <div id="productDescriptionError" class="error"></div>
+
+      <!-- Price -->
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" required min="0.01" max="999.99" step="0.01">
+      <div id="priceError" class="error"></div>
+
+      <!-- Supplier Username -->
+      <label for="supplierUsername">Supplier Username:</label>
+      <input type="text" id="supplierUsername" name="supplierUsername" required pattern="[A-Za-z][A-Za-z0-9]{3,}">
+      <div id="supplierUsernameError" class="error"></div>
+
+      <!-- Supplier Status -->
+      <label>Supplier Status:</label>
+      <div id="supplierStatus">
+        <input type="checkbox" id="newSupplier" name="supplierStatus" value="New Supplier">
+        <label for="newSupplier">New Supplier</label><br>
+        <input type="checkbox" id="contractSigned" name="supplierStatus" value="Contract Signed">
+        <label for="contractSigned">Contract Signed</label><br>
+        <input type="checkbox" id="qualityTested" name="supplierStatus" value="Quality Tested">
+        <label for="qualityTested">Quality Tested</label><br>
+      </div>
+      <div id="supplierStatusError" class="error"></div>
+
+      <!-- Supplier Email -->
+      <label for="supplierEmail">Supplier Email:</label>
+      <input type="email" id="supplierEmail" name="supplierEmail" required>
+      <div id="supplierEmailError" class="error"></div>
+
+      <!-- Hidden fields -->
+      <input type="hidden" name="FullName" id="FullName" value="Rajesh Sah">
+      <input type="hidden" name="studentId" id="studentId" value="175281211">
+
+      <!-- Submit and Reset buttons -->
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <div>
+    <p>Date: 2024-04-08</p>
+  </div>
+  <footer>
+    <p align="center">Made with ❤️ by Rajesh Sah</p>
+    <p align="center">
+    GitHub: <a href="https://github.com/hunteras666/WEB222">https://github.com/hunteras666/WEB222</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
